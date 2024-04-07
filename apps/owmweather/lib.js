@@ -39,7 +39,8 @@ exports.pull = function(completionCallback) {
     "location": "London"
   };
   let settings = require("Storage").readJSON("owmweather.json", 1);
-  let uri = "https://api.openweathermap.org/data/2.5/weather?lat=" + location.lat.toFixed(2) + "&lon=" + location.lon.toFixed(2) + "&exclude=hourly,daily&appid=" + settings.apikey;
+  // let uri = "https://api.openweathermap.org/data/2.5/weather?lat=" + location.lat.toFixed(2) + "&lon=" + location.lon.toFixed(2) + "&exclude=hourly,daily&appid=" + settings.apikey;
+  let uri = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + location.lat.toFixed(2) + '&lon=' + location.lon.toFixed(2) + '&exclude=hourly,daily&cnt=8&appid=' + settings.apikey;
   if (Bangle.http){
     Bangle.http(uri, {timeout:10000}).then(event => {
       let result = parseWeather(event.resp);
