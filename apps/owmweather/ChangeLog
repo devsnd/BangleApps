@@ -2,3 +2,4 @@
 0.02: Do first update request 5s after boot to boot up faster
 0.03: Fix updating weather too often
 0.04: Minor code improvements
+0.05: Retry loading weather data after BLE reconnect, some refactoring
