@@ -1,0 +1,14 @@
+{ "id": "macgiver",
+  "name": "MAC Giver",
+  "shortName":"MAC Giver",
+  "version":"0.01",
+  "description": "Give your Bangle.js a new MAC address. Sometimes it is bothersome to connect the BangleJS to different devices. This app should help you to make the connection easier. Instead of 'forgetting' the device and reconnecting, you can change the MAC address of the BangleJS and let only your PC or your phone know about that particular address.",
+  "icon": "app.png",
+  "tags": "",
+  "supports" : ["BANGLEJS2"],
+  "readme": "README.md",
+  "storage": [
+    {"name":"macgiver.app.js","url":"app.js"},
+    {"name":"macgiver.img","url":"app-icon.js","evaluate":true}
+  ]
+}
