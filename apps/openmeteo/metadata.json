@@ -1,0 +1,18 @@
+{ "id": "openmeteo",
+  "name": "Open-Meteo weather provider",
+  "shortName":"Open-Meteo Weather",
+  "version": "0.01",
+  "description": "Pulls weather from Open Meteo API, no API key required. Works as Drop-in Replacement for owmweather.",
+  "icon": "app.png",
+  "type": "bootloader",
+  "tags": "boot,tool,weather",
+  "supports" : ["BANGLEJS2"],
+  "readme": "README.md",
+  "data": [
+    {"name":"weather.json"}
+  ],
+  "storage": [
+    {"name":"openmeteo.boot.js","url":"boot.js"},
+    {"name":"openmeteo","url":"lib.js"}
+  ]
+}
