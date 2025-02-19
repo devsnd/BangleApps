@@ -1,0 +1,16 @@
+{
+  "id": "chargeanim2",
+  "name": "Another Charge Animation",
+  "version": "0.01",
+  "description": "When charging, show charging animation and keep the screen on. When removed from the charger load the clock again.",
+  "icon": "icon.png",
+  "tags": "battery",
+  "supports": ["BANGLEJS", "BANGLEJS2"],
+  "allow_emulator": true,
+  "screenshots": [{"url":"bangle2-charge-animation-screenshot.png"},{"url":"bangle-charge-animation-screenshot.png"}],
+  "storage": [
+    {"name":"chargeanim2.app.js","url":"app.js"},
+    {"name":"chargeanim2.boot.js","url":"boot.js"},
+    {"name":"chargeanim2.img","url":"app-icon.js","evaluate":true}
+  ]
+}
