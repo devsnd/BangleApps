@@ -3,7 +3,7 @@
   "name": "Charge Animation 2",
   "shortName": "Charge Animation 2",
   "version": "0.01",
-  "description": "Show nice charging animation and keep the screen on. When removed from the charger load the clock again.",
+  "description": "Show nice charging animation with small clock, ETA and current charging percentage. When removed from the charger load the clock again.",
   "icon": "icon.png",
   "tags": "battery",
   "supports": ["BANGLEJS", "BANGLEJS2"],
