@@ -1,0 +1,23 @@
+{
+  "id": "taptap",
+  "name": "Tap Tap",
+  "shortName": "Tap Tap",
+  "version": "0.01",
+  "description": "Tap Tap is a tool to control multiple Bangle.js functions with a tap or a tap combination.",
+  "icon": "app.png",
+  "screenshots": [
+  ],
+  "type": "app",
+  "tags": "tool,lock,tap",
+  "supports": ["BANGLEJS2"],
+  "readme": "README.md",
+  "storage": [
+    {"name": "taptap.boot.js", "url": "boot.js"},
+    {"name": "taptap.js", "url": "lib.js"},
+    {"name": "taptap.settings.js", "url": "settings.js"}
+  ],
+  "data": [
+    {"name": "taptap.json"},
+    {"name": "taptap.images.json", "url": "images.json"}
+  ]
+}
