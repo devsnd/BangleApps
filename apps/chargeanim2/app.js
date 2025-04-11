@@ -13,8 +13,19 @@ imgbubble[3] = 0;
 var imgh = 88;
 var imgw = 56;
 
-var firstBat = E.getBattery();
+// force monotonic battery reading
+var op = E.getBattery;
+var p = Math.round(op()+op()+op()+op())/4;
+var getBattery = function() {
+  var current = Math.round((op()+op()+op()+op())/4);
+  if (Bangle.isCharging() && current > p) p = current;
+  if (!Bangle.isCharging() && current < p) p = current;
+  return p;
+};
+
+var firstBat = getBattery();
 var firstTime = getTime();
+
 
 var sintable = [];
 for (var r=0; r<16; r++) {
@@ -34,7 +45,7 @@ function anim() {
   var cy = g.getHeight()/2.0;
 
   var elapsed = getTime() - firstTime;
-  var bat = E.getBattery();
+  var bat = getBattery();
   var charged = bat - firstBat;
 
   // charged = (elapsed*1.4) | 0; // dev
