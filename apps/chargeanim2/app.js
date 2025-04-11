@@ -26,7 +26,6 @@ var getBattery = function() {
 var firstBat = getBattery();
 var firstTime = getTime();
 
-
 var sintable = [];
 for (var r=0; r<16; r++) {
   sintable.push(Math.sin(Math.PI*r/8));
@@ -48,9 +47,6 @@ function anim() {
   var bat = getBattery();
   var charged = bat - firstBat;
 
-  // charged = (elapsed*1.4) | 0; // dev
-  // bat = Math.min(100, (4 + charged)) | 0;  //dev
-
   var eta = '';
   if (charged > 0) {
     var min = ((100 - bat) * elapsed / charged / 60) | 0;
@@ -61,7 +57,6 @@ function anim() {
   if (bat === 100) {
     wiggle = 0;
   }
-
 
   var xpos = cx - 28;
   var ypos = cy - 60 + wiggle;
